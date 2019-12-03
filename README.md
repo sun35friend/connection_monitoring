@@ -4,6 +4,7 @@ If lockfile is old, it removes it.
 Output Messages will be written to /var/log/wifi_check.log
 
 Date:      03.12.2019
+
 Author:    Florian Weiner
            florian@weiner-online.net
 
