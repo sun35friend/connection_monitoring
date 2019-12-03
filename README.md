@@ -15,5 +15,4 @@ Installation:
 - sudo mkdir -p /scripts
 - cd /scripts
 - sudo git clone https://github.com/sun30friend/connection_monitoring.git
-- sudo chmod 0775 /scripts/connection_monitoring/install.sh
-- sudo /scripts/connection_monitoring/install.sh
+- sudo sh ./scripts/connection_monitoring/install.sh
