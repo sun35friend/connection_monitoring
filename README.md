@@ -30,7 +30,7 @@ Changes to original Project
 
 Installation:
 
-o Install where you want to run it from like /scripts 
+o Install where you want to run it from like /scripts
 o chmod 0755 /scripts/wifi_check 
 o touch /var/log/wifi_check.log 
 o chmod 0640 /var/log/wifi_check.log 
