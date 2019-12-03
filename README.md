@@ -5,11 +5,10 @@ The Logfile will be automatically overwritten on the next run
 
 Project:        connection_monitoring
 
-Author:         Florian Weiner (sun35friend)
-                sun35friend@gmail.com
+Author:         Florian Weiner (sun35friend@gmail.com)
 
-Copyright:      Copyright (c) 2019 Florian Weiner (sun35friend@gmail.com)
-                https://github.com/sun30friend/connection_monitoring
+Copyright:      Copyright (c) 2019 Florian Weiner
+Git Repo:       https://github.com/sun30friend/connection_monitoring
 
 Installation:
 
