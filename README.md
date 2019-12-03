@@ -10,14 +10,14 @@ Author:    Florian Weiner (sun35friend)
 
 Title:     wifi_check
 
-Copyright: Copyright (c) 2019 Florian Weiner (sun35friend@gmail.com) 
+Copyright: Copyright (c) 2019 Florian Weiner (sun35friend@gmail.com)
            https://github.com/sun30friend/wifi_check
 
 
 >>> Original Project from TNET Services, Inc <<<
 
-Author:    Kevin Reed (Dweeber) 
-           dweeber.dweebs@gmail.com 
+Author:    Kevin Reed (Dweeber)
+           dweeber.dweebs@gmail.com
 Project:   Raspberry Pi Stuff
 
 Copyright: Copyright (c) 2012 Kevin Reed kreed@tnet.com
