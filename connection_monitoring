@@ -1,0 +1,64 @@
+#!/bin/bash
+
+##################################################################
+#                           SETTINGS                             #
+##################################################################
+
+# Lockfile
+lockfile='/var/run/connection_monitoring.pid'
+
+# Interface
+interface='wlan0'
+
+# IP Address to check
+testip='10.0.5.1'
+
+# get Interface status and current IP Adress
+istat=`cat /sys/class/net/$interface/operstate`
+iIP=`/sbin/ifconfig $interface | grep inet`
+
+####################################################################################################################################
+# 		                                        DON'T MAKE ANY CHANGES AFTER THIS LINE			                                   #
+####################################################################################################################################
+
+##################################################################
+###                         Lockfile                           ###
+##################################################################
+
+if [ -e $lockfile ]; then
+    pid=`cat $lockfile`
+    if kill -0 &>1 > /dev/null $pid; then
+        echo "Process still running"
+        exit 1
+    else
+        echo "Removing old Lockfile"
+        rm $lockfile
+    fi
+fi
+
+echo $$ > $lockfile
+
+##################################################################
+###      performing network checks and try to repair the       ###
+###             connection in case of any issue                ###
+##################################################################
+
+if [ $istat = "up" ] ; then
+    echo "Interface $interface state is $istat"
+        # Continue with Ping Test
+        /bin/ping -c 2 -I $interface $testip > /dev/null 2> /dev/null
+        if [ $? -ge 1 ] ; then
+            echo "Ping to $testip failed, try to reconnect to Network..."
+            /sbin/dhcpcd -n $interface
+        else
+            echo "Network connection established with $iIP"
+        fi
+else
+    echo "Interface $interface down, rebooting system..."
+    /sbin/reboot
+fi
+
+echo
+echo "...all checks complete, removing lockfile and exit Script"
+rm $lockfile
+exit 0
