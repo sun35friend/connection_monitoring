@@ -12,12 +12,14 @@ Project:        connection_monitoring
 Author:         Florian Weiner (sun35friend@gmail.com)
 
 Copyright:      Copyright (c) 2019 Florian Weiner
+
 Github:         https://github.com/sun30friend/connection_monitoring
 
 Installation:
+
 to use the install.sh configuration script, you need to create a folder /scripts, 
 clone the git repository and run the script with below commands:
 
 - sudo mkdir -p /scripts
 - sudo git clone https://github.com/sun35friend/connection_monitoring.git /scripts/connection_monitoring
-- sudo sh /scripts/install.sh
+- sudo sh /scripts/connection_monitoring/install.sh
