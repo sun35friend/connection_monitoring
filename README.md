@@ -1,7 +1,6 @@
-Script checks to see if WiFi has a network IP and if not try to reconnect
-A lock file will be used which prevents the script from running more than one at a time.  
-If lockfile is old, it will be removed.
-Output Messages will be written to /var/log/connection_monitoring.log
+Script to check if specified Network Interface is up and a ping to a test IP Address is successful.
+A lockfile prevents the script from running multiple times  
+Output Messages are redirected to /var/log/connection_monitoring.log
 
 Beside the Network Connection Monitoring, Watchdog will be installed and configured
 to Auto-reboot a hung Raspberry Pi using the on-board watchdog timer.
@@ -10,15 +9,15 @@ Area within the install.sh File.
 
 Project:        connection_monitoring
 
-Author:         Florian Weiner (sun35friend)
-                sun35friend@gmail.com
+Author:         Florian Weiner (sun35friend@gmail.com)
 
-Copyright:      Copyright (c) 2019 Florian Weiner (sun35friend@gmail.com)
-                https://github.com/sun30friend/connection_monitoring
+Copyright:      Copyright (c) 2019 Florian Weiner
+Github:         https://github.com/sun30friend/connection_monitoring
 
 Installation:
+to use the install.sh configuration script, you need to create a folder /scripts, 
+clone the git repository and run the script with below commands:
 
 - sudo mkdir -p /scripts
-- sudo git clone https://github.com/sun30friend/connection_monitoring.git
-- sudo chmod 0775 /scripts/install.sh
-- sudo /scripts/install.sh
+- sudo git clone https://github.com/sun35friend/connection_monitoring.git /scripts/connection_monitoring
+- sudo sh /scripts/install.sh
