@@ -13,7 +13,7 @@ Author:         Florian Weiner (sun35friend@gmail.com)
 
 Copyright:      Copyright (c) 2019 Florian Weiner
 
-Github:         https://github.com/sun30friend/connection_monitoring
+Github:         https://github.com/sun35friend/connection_monitoring
 
 Installation:
 
